@@ -1,0 +1,130 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <!-- Loader -->
+    <div class="loader" id="loader-fade">
+        <div class="loader-container">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!-- Loader ends -->
+
+    <!-- Header start -->
+    <header>
+        <nav class="navbar navbar-top-default navbar-expand-lg static-nav black nav-radius transparent-bg bottom-nav box-nav not-full no-animation">
+            <div class="container radius nav-box-shadow">
+                <a class="logo link" href="javascript:void(0)">
+                    <img src="personal-profile/img/logo.png" alt="logo" title="Logo">
+                </a>
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a>
+                        </li>
+                        <li class="nav-item"> <a href="#features" class="scroll nav-link link">features</a>
+                        </li>
+                        <li class="nav-item"> <a href="#work" class="scroll nav-link link">work</a>
+                        </li>
+                        <li class="nav-item"> <a href="#pricing" class="scroll nav-link link">pricing</a>
+                        </li>
+                        <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a>
+                        </li>
+                        <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a>
+                        </li>
+                        <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- side menu open button -->
+                <a class="menu_bars d-inline-block menu-bars-setting menu-inner" id="sidemenu_toggle">
+                    <div class="menu-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <div class="inner-wrapper nav-icon">
+                <span class="btn-close link" id="btn_sideNavClose"></span>
+                <nav class="side-nav w-100">
+                    <div class="navbar-nav">
+                        <a class="nav-link link scroll active" href="#home">Home</a>
+                        <a class="nav-link link scroll" href="#features">Features</a>
+                        <a class="nav-link link scroll" href="#work">Work</a>
+                        <a class="nav-link link scroll" href="#pricing">Pricing</a>
+                        <a class="nav-link link scroll" href="#clients">Clients</a>
+                        <a class="nav-link link scroll" href="#blog">Blog</a>
+                        <a class="nav-link link scroll" href="#contact">Contact</a>
+                        <span class="menu-line"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </div>
+                </nav>
+
+                <div class="side-footer text-white w-100">
+                    <ul class="social-icons-simple">
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-facebook-f color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-instagram color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-twitter color-white"></i> </a> </li>
+                    </ul>
+                    <p class="text-white">&copy; 2020 MegaOne. Made With Love by Themesindustry</p>
+                </div>
+            </div>
+        </div>
+        <a id="close_side_menu" href="javascript:void(0);"></a>
+        <!--Side Menu-->
+    </header>
+    <!-- Header end -->
+
+    <!-- Main Section start -->
+    <section id="home" class="p-0 particles-version center-block">
+        <h2 class="d-none">hidden</h2>
+        <div id="particles-js" class="particle2 parallax-setting bg-img-1 bg-img-setting not-full">
+            <div class="bg-overlay bg-gradient"></div>
+            <div class="not-fullscreen">
+                <div class="col-lg-12 text-center center-col">
+                    <div class="personal-box">
+                        <div class="myphoto">
+                            <img src="{{ asset('img/thomas.png') }}" alt="image">
+                        </div>
+                        <div class="color-white">
+                            <h2>Hello, I'm allen</h2>
+                            <h3 id="personal"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Section end -->
+
+    <section>
+        <style>
+            .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+            .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        </style>
+
+        <div class="example-wrapper">
+            <h1>Hello {{ controller_name }}! ✅</h1>
+
+            Thomas : This friendly message is coming from:
+            <ul>
+                <li>Your controller at <code><a href="{{ '/Users/thomassieradzki/Desktop/Serveur/tom/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
+                <li>Your template at <code><a href="{{ '/Users/thomassieradzki/Desktop/Serveur/tom/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
+                <li>Accès à l'Index Articles <code><a href="{{ path('articles_index') }}">Index - Articles</a></code></li>
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') == false %}
+                    <li>Accès au login <code><a href="{{ path('app_login') }}">Connexion</a></code></li>
+                    <li>Accès au register <code><a href="{{ path('app_register') }}">Inscription</a></code></li>
+                {% else %}
+                    <li>Accès Déconnexion <code><a href="{{ path('app_logout') }}">Déconnexion</a></code></li>
+                {% endif %}
+            </ul>
+        </div>
+    </section>
+
+{% endblock %}

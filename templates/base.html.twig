@@ -3,10 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <!-- Favicon -->
+            <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+            <!-- Bundle -->
+            <link rel="stylesheet" href="{{ asset('css/bundle.min.css') }}">
+            <!-- Plugin Css -->
+            <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/cubeportfolio.min.css') }}">
+            <!-- Slick CSS Files -->
+            <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
+            <!-- Style Sheet -->
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <!-- Custom Style CSS File -->
+            <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <!-- JavaScript -->
+            <script src="{{ asset('js/bundle.min.js') }}"></script>
+
+            <!-- Plugin Js -->
+            <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+            <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/swiper.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.cubeportfolio.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.appear.js') }}"></script>
+            <script src="{{ asset('js/parallaxie.min.js') }}"></script>
+            <script src="{{ asset('js/wow.min.js') }}"></script>
+            <!-- Owl Carousel JS File -->
+            <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+            <!-- Particles JS File -->
+            <script src="{{ asset('js/particles.min.js') }}"></script>
+            <!-- EqualHeight JS File -->
+            <script src="{{ asset('js/jquery.matchHeight-min.js') }}"></script>
+            <!-- Owl Carousel JS File -->
+            <script src="{{ asset('js/owl.carousel.js') }}"></script>
+            <!-- Typewriter JS File -->
+            <script src="{{ asset('js/typewriter.js') }}"></script>
+            <!-- Google Map Api -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+            <script src="{{ asset('js/maps.min.js') }}"></script>
+            <!-- custom script -->
+            <script src="{{ asset('js/script.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
